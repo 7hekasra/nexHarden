@@ -50,7 +50,7 @@
 ابتدا پروژه را Clone کنید:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/nexHarden.git
+git clone https://github.com/7hekasra/nexHarden.git
 ```
 
 و وارد پوشه پروژه شوید:
@@ -62,14 +62,10 @@ cd nexHarden
 سپس برنامه را اجرا کنید:
 
 ```bash
-python3 nexHarden.py
-```
-
-برای بررسی‌هایی که به دسترسی Root نیاز دارند:
-
-```bash
 sudo python3 nexHarden.py
 ```
+
+اجرای این برنامه نیاز به دسترسی ROOT دارد.
 
 ---
 
