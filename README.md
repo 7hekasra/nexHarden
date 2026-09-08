@@ -1,6 +1,6 @@
-# 🛡️ nexHardener
+# 🛡️ nexHarden
 
-> A lightweight Linux system hardening tool designed to improve system security through automated checks and security recommendations.
+> یک ابزار سبک و کاربردی برای هاردنینگ و افزایش امنیت سیستم‌های لینوکسی
 
 <p align="center">
   <img src="https://img.shields.io/badge/Linux-Security-purple?style=for-the-badge&logo=linux" alt="Linux Security">
@@ -10,212 +10,214 @@
 
 ---
 
-## 📖 About
+## 📖 درباره پروژه
 
-**nexHardener** is a Linux security hardening tool that helps users identify common security weaknesses and improve the overall security posture of their systems.
+**nexHarden** یک ابزار امنیتی برای سیستم‌های لینوکسی است که با هدف شناسایی تنظیمات ناامن و کمک به هاردنینگ سیستم طراحی شده است.
 
-The project is designed to make Linux hardening easier, faster, and more accessible without requiring users to manually inspect every security-related configuration.
-
----
-
-## ✨ Features
-
-* 🔍 Security configuration checks
-* 🔐 SSH security checks
-* 👤 User and permission checks
-* 🔥 Firewall status checks
-* ⚙️ System configuration checks
-* 📦 Service inspection
-* 🚨 Detection of potentially insecure configurations
-* 📊 Security status overview
-* 🛡️ Hardening recommendations
-* ⚡ Lightweight and fast CLI-based design
+این ابزار تلاش می‌کند فرآیند بررسی و بهبود تنظیمات امنیتی سیستم را ساده‌تر کند تا کاربران بتوانند مشکلات امنیتی رایج را سریع‌تر شناسایی و برطرف کنند.
 
 ---
 
-## 🧰 Requirements
+## ✨ قابلیت‌ها
 
-* Linux
+* 🔍 بررسی تنظیمات امنیتی سیستم
+* 🔐 بررسی تنظیمات SSH
+* 👤 بررسی کاربران و سطح دسترسی‌ها
+* 🔥 بررسی وضعیت Firewall
+* ⚙️ بررسی تنظیمات سیستم
+* 📦 بررسی سرویس‌های فعال
+* 🚨 شناسایی تنظیمات ناامن
+* 📊 نمایش وضعیت امنیتی سیستم
+* 🛡️ ارائه پیشنهادهای Hardening
+* ⚡ سبک و سریع
+
+---
+
+## 🧰 پیش‌نیازها
+
+برای اجرای nexHarden به موارد زیر نیاز دارید:
+
+* سیستم‌عامل Linux
 * Python 3.x
-* Root privileges for some checks
+* دسترسی Root برای برخی بررسی‌ها
 
-Depending on the Linux distribution, some checks may require additional system utilities.
-
----
-
-## 🚀 Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/nexHardener.git
-```
-
-Enter the project directory:
-
-```bash
-cd nexHardener
-```
-
-Run nexHardener:
-
-```bash
-python3 nexHardener.py
-```
-
-For checks that require elevated privileges:
-
-```bash
-sudo python3 nexHardener.py
-```
+برخی قابلیت‌ها ممکن است بسته به توزیع لینوکس به ابزارهای سیستمی دیگری نیز نیاز داشته باشند.
 
 ---
 
-## 💻 Usage
+## 🚀 نصب
 
-Simply run the tool:
+ابتدا پروژه را Clone کنید:
 
 ```bash
-python3 nexHardener.py
+git clone https://github.com/YOUR_USERNAME/nexHarden.git
 ```
 
-nexHardener will inspect the system and report potential security issues and recommended improvements.
+و وارد پوشه پروژه شوید:
 
-Example:
+```bash
+cd nexHarden
+```
+
+سپس برنامه را اجرا کنید:
+
+```bash
+python3 nexHarden.py
+```
+
+برای بررسی‌هایی که به دسترسی Root نیاز دارند:
+
+```bash
+sudo python3 nexHarden.py
+```
+
+---
+
+## 💻 نحوه استفاده
+
+برای اجرای ابزار کافی است دستور زیر را اجرا کنید:
+
+```bash
+python3 nexHarden.py
+```
+
+nexHarden سیستم را بررسی کرده و موارد مهم امنیتی و تنظیمات پیشنهادی را نمایش می‌دهد.
+
+نمونه خروجی:
 
 ```text
 ╔══════════════════════════════════════╗
-║              nexHardener             ║
+║               nexHarden              ║
 ║        Linux Security Hardener       ║
 ╚══════════════════════════════════════╝
 
-[+] Checking system configuration...
-[+] Checking SSH configuration...
-[+] Checking firewall...
-[+] Checking users and permissions...
-[+] Checking active services...
+[+] در حال بررسی تنظیمات سیستم...
+[+] در حال بررسی تنظیمات SSH...
+[+] در حال بررسی Firewall...
+[+] در حال بررسی کاربران و دسترسی‌ها...
+[+] در حال بررسی سرویس‌های فعال...
 
-Security checks completed.
+بررسی سیستم به پایان رسید.
 
-[✓] SSH configuration
+[✓] تنظیمات SSH
 [✓] Firewall
-[!] User configuration
-[✓] System configuration
-[!] Service configuration
+[!] تنظیمات کاربران
+[✓] تنظیمات سیستم
+[!] سرویس‌های فعال
 ```
 
 ---
 
-## 🔎 Security Checks
+## 🔎 بررسی‌های امنیتی
 
 ### 🔐 SSH
 
-Checks common SSH security configurations such as:
+بررسی تنظیمات مهم SSH از جمله:
 
-* Root login configuration
-* Password authentication
-* SSH configuration
-* Potentially insecure settings
+* تنظیمات ورود کاربر Root
+* فعال بودن Password Authentication
+* تنظیمات پیکربندی SSH
+* شناسایی برخی تنظیمات ناامن
 
 ### 🔥 Firewall
 
-Checks whether a firewall is enabled and attempts to identify commonly used firewall systems such as:
+بررسی وضعیت Firewall سیستم و شناسایی ابزارهای رایج مانند:
 
 * UFW
 * firewalld
 * nftables
 * iptables
 
-### 👤 Users & Permissions
+### 👤 کاربران و دسترسی‌ها
 
-Checks system users and potentially sensitive configurations related to:
+بررسی موارد مرتبط با کاربران سیستم، از جمله:
 
-* User accounts
-* Privileged users
-* Shell access
-* UID configuration
-* Permissions
+* حساب‌های کاربری
+* کاربران دارای دسترسی بالا
+* Shell کاربران
+* UIDها
+* تنظیمات دسترسی
 
-### ⚙️ Services
+### ⚙️ سرویس‌ها
 
-Inspects active services and helps identify potentially unnecessary services that could increase the system's attack surface.
+بررسی سرویس‌های فعال سیستم و شناسایی سرویس‌هایی که ممکن است غیرضروری باشند و سطح حمله سیستم را افزایش دهند.
 
-### 🖥️ System Configuration
+### 🖥️ تنظیمات سیستم
 
-Checks selected system-level security configurations and provides recommendations where applicable.
-
----
-
-## 🛡️ Hardening
-
-The goal of nexHardener is not only to detect security issues, but also to provide practical recommendations for improving the system.
-
-Future versions may include automated hardening capabilities with:
-
-* Configuration backups
-* Safe configuration changes
-* Restore functionality
-* Hardening profiles
-* Interactive confirmation before applying changes
+بررسی برخی تنظیمات سطح سیستم که می‌توانند روی امنیت سیستم تأثیرگذار باشند و ارائه پیشنهاد برای بهبود آن‌ها.
 
 ---
 
-## ⚠️ Warning
+## 🛡️ هاردنینگ
 
-**Use this tool carefully on production systems.**
+هدف nexHarden تنها شناسایی مشکلات نیست؛ بلکه در ادامه توسعه پروژه، قابلیت‌هایی برای انجام فرآیند Hardening نیز در نظر گرفته خواهد شد.
 
-Changing security configurations can potentially:
+برخی قابلیت‌های برنامه‌ریزی‌شده:
 
-* Disable services
-* Change system behavior
-* Restrict user access
-* Break existing configurations
-* Lock you out of remote systems
-
-Always create a backup before applying security-related changes.
+* ایجاد Backup قبل از تغییر تنظیمات
+* اعمال تغییرات امنیتی
+* امکان بازگردانی تنظیمات
+* پروفایل‌های مختلف Hardening
+* تأیید کاربر قبل از اعمال تغییرات
 
 ---
 
-## 🗺️ Roadmap
+## ⚠️ هشدار
 
-* [x] Initial project
-* [x] Basic security checks
-* [ ] SSH hardening
-* [ ] Firewall hardening
-* [ ] User & permission audit
-* [ ] Service audit
-* [ ] Security scoring
-* [ ] Interactive CLI
-* [ ] Automatic configuration backup
-* [ ] Configuration restore
-* [ ] JSON output
-* [ ] Detailed reports
-* [ ] Hardening profiles
-* [ ] More Linux distributions
-* [ ] Improved detection engine
+**قبل از اعمال هرگونه تغییر امنیتی روی سیستم‌های مهم یا Production حتماً Backup تهیه کنید.**
+
+تغییر برخی تنظیمات ممکن است باعث موارد زیر شود:
+
+* از کار افتادن سرویس‌ها
+* تغییر رفتار سیستم
+* محدود شدن دسترسی کاربران
+* ایجاد مشکل در تنظیمات فعلی
+* قطع شدن دسترسی SSH
+
+استفاده از این ابزار کاملاً بر عهده کاربر است.
 
 ---
 
-## 🤝 Contributing
+## 🗺️ نقشه راه
 
-Contributions, ideas, bug reports, and improvements are welcome.
-
-If you find a bug or have an idea that could make nexHardener better, feel free to open an issue or submit a pull request.
+* [x] ایجاد پروژه
+* [x] بررسی‌های اولیه امنیتی
+* [ ] هاردنینگ SSH
+* [ ] هاردنینگ Firewall
+* [ ] بررسی کاربران و دسترسی‌ها
+* [ ] بررسی سرویس‌ها
+* [ ] سیستم امتیازدهی امنیتی
+* [ ] رابط تعاملی CLI
+* [ ] ایجاد Backup خودکار
+* [ ] امکان Restore تنظیمات
+* [ ] خروجی JSON
+* [ ] گزارش امنیتی کامل
+* [ ] پروفایل‌های Hardening
+* [ ] پشتیبانی بهتر از توزیع‌های مختلف Linux
+* [ ] بهبود موتور تشخیص مشکلات امنیتی
 
 ---
 
-## 📄 License
+## 🤝 مشارکت
 
-This project currently does not include a license.
+اگر ایده‌ای برای بهتر شدن **nexHarden** دارید، می‌توانید آن را با پروژه به اشتراک بگذارید.
+
+گزارش باگ‌ها، پیشنهاد قابلیت‌های جدید و Pull Requestها به بهتر شدن پروژه کمک می‌کنند.
 
 ---
 
-## ⭐ Support
+## 📄 مجوز
 
-If you find **nexHardener** useful, consider giving the project a ⭐ on GitHub.
+این پروژه در حال حاضر فاقد License است.
+
+---
+
+## ⭐ حمایت از پروژه
+
+اگر **nexHarden** برای شما مفید بود، با ⭐ دادن به پروژه در GitHub از آن حمایت کنید.
 
 ---
 
 <p align="center">
-  Made for Linux security 🐧🛡️
+  ساخته شده برای امنیت بیشتر در دنیای Linux 🐧🛡️
 </p>
