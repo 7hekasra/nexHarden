@@ -1,0 +1,26 @@
+اجرای nexHarden
+
+اول ریپو رو Clone می‌کنی و وارد پوشه می‌شی:
+
+git clone https://github.com/7hekasra/nexHarden.git
+cd nexHarden
+
+بعد با دسترسی Root اجراش می‌کنی:
+
+sudo python3 nexHarden.py
+
+بعد از اجرا، ابزار شروع می‌کنه به بررسی بخش‌هایی مثل:
+
+🔐 تنظیمات SSH
+🔥 وضعیت Firewall
+👤 کاربران و سطح دسترسی‌ها
+⚙️ تنظیمات امنیتی سیستم
+📦 سرویس‌های فعال
+🚨 تنظیمات ناامن و مواردی که نیاز به Hardening دارن
+
+در نهایت وضعیت هر بخش رو به شکل ساده با علامت‌هایی مثل ✓ و ! نمایش می‌ده و برای موارد مشکل‌دار پیشنهاد Hardening ارائه می‌کنه.
+
+
+GitHub: github.com/7hekasra
+Telegram: t.me/linuxfarci
+Website: linuxfarci.ir

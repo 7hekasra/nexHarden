@@ -1,0 +1,27 @@
+### Running nexHarden
+
+First, clone the repository and navigate into the project directory:
+
+
+git clone https://github.com/7hekasra/nexHarden.git
+cd nexHarden
+
+Then, run the tool with root privileges:
+
+sudo python3 nexHarden.py
+
+After launching, nexHarden starts checking different parts of the system, including:
+
+* 🔐 **SSH** configuration
+* 🔥 **Firewall** status
+* 👤 Users and their permissions
+* ⚙️ System security settings
+* 📦 Active services
+* 🚨 Insecure configurations and potential hardening issues
+
+At the end, the tool displays the status of each section using simple indicators such as `✓` and `!`, and provides hardening recommendations for detected security issues.
+
+
+GitHub: github.com/7hekasra
+Telegram: t.me/linuxfarci
+Website: linuxfarci.ir
